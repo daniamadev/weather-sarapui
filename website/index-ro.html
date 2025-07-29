@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analiză Climatică - Date INMET</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="language-switcher">
+                <a href="index.html" title="Português"><img src="https://flagcdn.com/w20/br.png" alt="Português"></a>
+                <a href="index-ro.html" title="Română"><img src="https://flagcdn.com/w20/ro.png" alt="Română"></a>
+            </div>
+            
+            <h1>Analiză Exploratorie a Datelor Climatice</h1>
+            <p>Temperaturi extreme în orașul Sarapuí, São Paulo folosind date de la stația meteorologică São Miguel Arcanjo, SP, furnizate de INMET.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="intro">
+            <h2>Despre Proiect</h2>
+            <p>Aici explorăm temperaturile extreme din anii 2010, 2014, 2020 și 2024 pentru orașul Sarapuí, SP și analizăm cum baza de date utilizată poate oferi informații valoroase pentru îmbunătățiri viitoare ale proiectului.</p>
+            <p>Am folosit date deschise de pe inmet.gov.br, precum și Google Sheets și tehnologii precum Pandas, Github Pages, JavaScript, Charts.js, HTML și CSS.</p>
+        </section>
+
+        <section id="methodology">
+            <h2>Metodologie</h2>
+            <p>Metodologia aleasă a fost o analiză exploratorie utilizând Pandas și Python pentru a evidenția temperaturile extreme din anii selectați.</p>
+            <p>Am lucrat cu date, oră și temperatură în vizualizarea graficelor.</p>
+
+            <div class="methodology">
+                <div class="method-card">
+                    <h3>Colectarea Datelor (Data Collection)</h3>
+                    <p>Am utilizat date publice oferite de inmet.gov.br exportate în format CSV. Tabela originală furnizată de INMET poate fi vizualizată în secțiunea "Date Climatice 2024".</p>
+                </div>
+
+                <div class="method-card">
+                    <h3>Prelucrarea (Data Processing)</h3>
+                    <p>Procesul ETL a fost realizat în Google Sheets. Linii adiționale au fost eliminate și au fost adăugate două coloane calculate: prima pentru fusul orar local (BRT), deoarece INMET folosește UTC; a doua coloană a fost pentru datele corespunzătoare fiecărei ore, deoarece 00:00 UTC corespunde cu 21:00 BRT din ziua precedentă.</p>
+                </div>
+
+                <div class="method-card">
+                    <h3>Vizualizarea (Data Visualization)</h3>
+                    <p>
+                        Vizualizarea a fost realizată în Charts.js pentru afișarea pe această pagină, ilustrând temperaturile maxime și minime pentru fiecare an analizat, afișând data, ora și temperatura.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="data-table">
+            <h2>Date Climatice 2024</h2>
+            <p>Date colectate de la stația INMET pentru analiza variațiilor climatice.</p>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Data (Date)</th>
+                            <th>Ora UTC (UTC Time)</th>
+                            <th>Precipitații (mm)</th>
+                            <th>Presiune Stație (mB)</th>
+                            <th>Presiune Max (mB)</th>
+                            <th>Presiune Min (mB)</th>
+                            <th>Radiație (Kj/m²)</th>
+                            <th>Temp. Aer (°C)</th>
+                            <th>Temp. Rouă (°C)</th>
+                            <th>Temp. Max (°C)</th>
+                            <th>Temp. Min (°C)</th>
+                            <th>Rouă Max (°C)</th>
+                            <th>Rouă Min (°C)</th>
+                            <th>UM Max (%)</th>
+                            <th>UM Min (%)</th>
+                            <th>UM Orară (%)</th>
+                            <th>Vânt Dir. (°)</th>
+                            <th>Vânt Rafale (m/s)</th>
+                            <th>Vânt Viteza (m/s)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2024/01/01</td>
+                            <td>00:00</td>
+                            <td>0</td>
+                            <td>935,5</td>
+                            <td>935,6</td>
+                            <td>935,3</td>
+                            <td>-</td>
+                            <td>19,1</td>
+                            <td>16,8</td>
+                            <td>19,8</td>
+                            <td>19,1</td>
+                            <td>17,2</td>
+                            <td>16,8</td>
+                            <td>87</td>
+                            <td>85</td>
+                            <td>86</td>
+                            <td>162</td>
+                            <td>8,4</td>
+                            <td>5,4</td>
+                        </tr>
+                        <tr>
+                            <td>2024/01/01</td>
+                            <td>01:00</td>
+                            <td>0</td>
+                            <td>936,3</td>
+                            <td>936,3</td>
+                            <td>935,5</td>
+                            <td>-</td>
+                            <td>19,3</td>
+                            <td>16,9</td>
+                            <td>19,3</td>
+                            <td>19,1</td>
+                            <td>17,0</td>
+                            <td>16,8</td>
+                            <td>87</td>
+                            <td>86</td>
+                            <td>86</td>
+                            <td>164</td>
+                            <td>10,5</td>
+                            <td>3,7</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="visualizations">
+            <h2>Vizualizări ale Datelor</h2>
+
+            <div class="gallery">
+                <div class="gallery-item">
+                    <div class="gallery-caption">2010</div>
+                    <div class="chart-container">
+                        <canvas id="myChart2010" width="400" height="200"></canvas>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-caption">2020</div>
+                    <canvas id="myChart2020" width="400" height="200"></canvas>
+                    <div class="chart-container">
+                    </div>
+                </div>
+            </div>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <div class="gallery-caption">2014</div>
+                    <canvas id="myChart2014" width="400" height="200"></canvas>
+                    <div class="chart-container">
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-caption">2024</div>
+                    <canvas id="myChart2024" width="400" height="200"></canvas>
+                    <div class="chart-container">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="conclusion">
+            <h2>💡 Concluzii</h2>
+            <p>Baza de date oferită de INMET este foarte bogată și oferă multe posibilități de analiză. Mai jos sunt câteva întrebări care pot fi răspunse folosind aceste date:</p>
+                <ul>
+                    <li>Câte zile, într-un anumit an, temperatura a depășit 30°C?</li>
+                    <li>Câte zile au plouat într-o anumită perioadă a anului?</li>
+                    <li>Care zi a avut cele mai multe/mai puține precipitații?</li>
+                    <li>Câte zile consecutive nu a plouat?</li>
+                    <li>Există o corelație între zilele cu precipitații abundente și temperaturi ridicate/scăzute?</li>
+                    <li>Frecvența temperaturilor extreme a crescut, a scăzut sau a rămas constantă de-a lungul anilor?</li>
+                    <li>Combinație cu alte date INMET pentru calcularea indicelui de senzație termică.</li>
+                    <li>Adăugarea unei coloane pentru clasificarea lunilor pe sezoane.</li>
+                    <li>Corelarea temperaturilor extreme cu fenomene climatice specifice.</li>
+                    <li>Integrarea datelor de la alte stații meteorologice pentru completarea datelor lipsă.</li>
+                </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Proiect de Analiză Exploratorie a Datelor Climatice</p>
+            <p>Dezvoltat cu Python, Pandas și Charts.js</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./script.js"></script>
+    <script src="./chart.js"></script>
+</body>
+
+</html>
