@@ -11,183 +11,200 @@
 <body>
     <header>
         <div class="container">
-            <h1>Análise Exploratória de Dados Climáticos</h1>
-            <p>Temperaturas extremas da cidade de Sarapuí, São Paulo a partir de dados do INMET</p>
-        </div>
+            <div class="language-switcher">
+                <a href="index.html" title="Português"><img src="https://flagcdn.com/w20/br.png" alt="Português"></a>
+                <a href="index-ro.html" title="Română"><img src="https://flagcdn.com/w20/ro.png" alt="Română"></a>
+            </div>
+            <div class="container">
+                <h1>Análise Exploratória de Dados Climáticos</h1>
+                <p>Temperaturas extremas da cidade de Sarapuí, São Paulo a partir da estação metereológica de São Miguel
+                    Arcanjo, SP, fornecido pelo INMET.</p>
+            </div>
     </header>
 
     <main class="container">
         <section class="intro">
             <h2>Sobre o Projeto</h2>
-            <p>A proposta deste projeto é observar um efeito bem conhecido pela ciência, que já é de senso comum e
-                empírico: o aumento da temperatura média global.</p>
-            <p>Aqui vamos explorar as temperaturas extremas, mínimas e máximas dos anos de 2010, 2014, 2020 e 2024 da
-                cidade de Sarapuí, São Paulo e entender melhor como o projeto pode ser aprimorado no futuro.</p>
-            <p>Para que este projeto pudesse ser realizado foi-se utilizado dados abertos do inmet.gov, coletando dados
-                de estação metereológica, além da ferramenta Google Sheets e das tecnologias Pandas, Github Pages, Javascript, D3.js,
-                HTML e CSS.</p>
-
-            <a href="#methodology" class="btn">Ver Metodologia</a>
+            <p>Aqui vamos explorar as temperaturas extremas dos anos de 2010, 2014, 2020 e 2024 da
+                cidade de Sarapuí, SP e entender melhor como a base de dados utilizada pode oferecer insights para
+                aprimorações futuras do projeto.</p>
+            <p>Utilizou-se dados abertos do inmet.gov, além da ferramenta Google Sheets e das tecnologias Pandas, Github
+                Pages,
+                Javascript, Charts.js, HTML e CSS.</p>
         </section>
 
         <section id="methodology">
             <h2>Metodologia</h2>
-            <p>Consistiu na coleta de dados públicos do inmet.gov entre os anos de 2010, 2014, 2020 e 2024 no formato csv. É possível observar com a tabela abaixo de Dados Climáticos 2024 como o INMET organiza os dados exportados em csv.
-<p>Para a publicação deste projeto, apenas a coluna hora, data e temperatura foram utilizadas.</p>
-                <p>No tratamento de dados alguns procedimentos precisaram ser realizados, a hora, por exemplo, é informada em UTC, então uma coluna calculada foi criada para a conversão da hora em BRT timezone.</p>
-                com decremento de 3 horas para que a hora atualizada fosse referente ao horário de Brasília
-                consequentemente
-                uma nova coluna calculada precisou ser criada já que meia-noite UTC corresponde a 9 da noite BRT então
-                neste caso estaríamos falando do dia anterior de acordo com o horário de Brasília então duas colunas
-                calculadas
-                foram adicionadas para corresponder ao fuso horário de Brasília mas as colunas com fuso horário UTC
-                foram mantidas
-                para fins de consulta caso fossem necessárias</p>
-            <section class="data-table">
-                <h2>Dados Climáticos 2024</h2>
-                <p>Dados coletados da estação INMET para análise das variações climáticas.</p>
-
-                <div class="table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Data</th>
-                                <th>Hora UTC</th>
-                                <th>Precipitação (mm)</th>
-                                <th>Pressão Estação (mB)</th>
-                                <th>Pressão Máx (mB)</th>
-                                <th>Pressão Mín (mB)</th>
-                                <th>Radiação (Kj/m²)</th>
-                                <th>Temp. Ar (°C)</th>
-                                <th>Temp. Orvalho (°C)</th>
-                                <th>Temp. Máx (°C)</th>
-                                <th>Temp. Mín (°C)</th>
-                                <th>Orvalho Máx (°C)</th>
-                                <th>Orvalho Mín (°C)</th>
-                                <th>UR Máx (%)</th>
-                                <th>UR Mín (%)</th>
-                                <th>UR Horária (%)</th>
-                                <th>Vento Dir. (°)</th>
-                                <th>Vento Raj. (m/s)</th>
-                                <th>Vento Vel. (m/s)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>2024/01/01</td>
-                                <td>00:00</td>
-                                <td>0</td>
-                                <td>935,5</td>
-                                <td>935,6</td>
-                                <td>935,3</td>
-                                <td>-</td>
-                                <td>19,1</td>
-                                <td>16,8</td>
-                                <td>19,8</td>
-                                <td>19,1</td>
-                                <td>17,2</td>
-                                <td>16,8</td>
-                                <td>87</td>
-                                <td>85</td>
-                                <td>86</td>
-                                <td>162</td>
-                                <td>8,4</td>
-                                <td>5,4</td>
-                            </tr>
-                            <tr>
-                                <td>2024/01/01</td>
-                                <td>01:00</td>
-                                <td>0</td>
-                                <td>936,3</td>
-                                <td>936,3</td>
-                                <td>935,5</td>
-                                <td>-</td>
-                                <td>19,3</td>
-                                <td>16,9</td>
-                                <td>19,3</td>
-                                <td>19,1</td>
-                                <td>17,0</td>
-                                <td>16,8</td>
-                                <td>87</td>
-                                <td>86</td>
-                                <td>86</td>
-                                <td>164</td>
-                                <td>10,5</td>
-                                <td>3,7</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
+            <p>A metodologia escolhida foi uma análise exploratória utilizando Pandas e Python para destacar
+                as temperaturas extremas dos anos selecionados.</p>
+            <p>Foram trabalhados data, hora e temperatura na visualização dos gráficos.</p>
 
             <div class="methodology">
                 <div class="method-card">
                     <h3>Coleta de Dados</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit
-                        arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.
-                    </p>
+                    <p>Foram coletados dados públicos oferecidos pelo inmet.gov exportados em csv. É possível observar a
+                        tabela original oferecida pelo INMET na seção de Dados Climáticos 2024.</p>
                 </div>
 
                 <div class="method-card">
                     <h3>Processamento</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit
-                        arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.
-                    </p>
+                    <p>O processo de ETL foi feito no Google Sheets. Linhas adicionais foram removidas e duas colunas
+                        calculadas foram adicionadas: a primeira foi para adicionar o fuso horário local (BRT), já queo
+                        INMET trabalha com UTC; a segunda coluna foram datas correspondentes a cada horário, já que
+                        00:00 UTC equivale a 21:00 BRT do dia anterior.</p>
                 </div>
 
                 <div class="method-card">
                     <h3>Visualização</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit
-                        arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.
+                    <p>
+                        A visualização foi realizada em Charts.js para ser exibida nesta página, ilustrando máximas e
+                        mínimas de cada ano trabalhado, exibindo data, horário e a temperatura.
                     </p>
                 </div>
+            </div>
+        </section>
+
+        <section class="data-table">
+            <h2>Dados Climáticos 2024</h2>
+            <p>Dados coletados da estação INMET para análise das variações climáticas.</p>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Hora UTC</th>
+                            <th>Precipitação (mm)</th>
+                            <th>Pressão Estação (mB)</th>
+                            <th>Pressão Máx (mB)</th>
+                            <th>Pressão Mín (mB)</th>
+                            <th>Radiação (Kj/m²)</th>
+                            <th>Temp. Ar (°C)</th>
+                            <th>Temp. Orvalho (°C)</th>
+                            <th>Temp. Máx (°C)</th>
+                            <th>Temp. Mín (°C)</th>
+                            <th>Orvalho Máx (°C)</th>
+                            <th>Orvalho Mín (°C)</th>
+                            <th>UR Máx (%)</th>
+                            <th>UR Mín (%)</th>
+                            <th>UR Horária (%)</th>
+                            <th>Vento Dir. (°)</th>
+                            <th>Vento Raj. (m/s)</th>
+                            <th>Vento Vel. (m/s)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2024/01/01</td>
+                            <td>00:00</td>
+                            <td>0</td>
+                            <td>935,5</td>
+                            <td>935,6</td>
+                            <td>935,3</td>
+                            <td>-</td>
+                            <td>19,1</td>
+                            <td>16,8</td>
+                            <td>19,8</td>
+                            <td>19,1</td>
+                            <td>17,2</td>
+                            <td>16,8</td>
+                            <td>87</td>
+                            <td>85</td>
+                            <td>86</td>
+                            <td>162</td>
+                            <td>8,4</td>
+                            <td>5,4</td>
+                        </tr>
+                        <tr>
+                            <td>2024/01/01</td>
+                            <td>01:00</td>
+                            <td>0</td>
+                            <td>936,3</td>
+                            <td>936,3</td>
+                            <td>935,5</td>
+                            <td>-</td>
+                            <td>19,3</td>
+                            <td>16,9</td>
+                            <td>19,3</td>
+                            <td>19,1</td>
+                            <td>17,0</td>
+                            <td>16,8</td>
+                            <td>87</td>
+                            <td>86</td>
+                            <td>86</td>
+                            <td>164</td>
+                            <td>10,5</td>
+                            <td>3,7</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
         <section class="visualizations">
             <h2>Visualizações dos Dados</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.</p>
 
             <div class="gallery">
                 <div class="gallery-item">
-                    <img src="https://via.placeholder.com/600x400/1a5276/ffffff?text=Gráfico+1"
-                        alt="Gráfico de temperaturas máximas">
-                    <div class="gallery-caption">Temperaturas máximas anuais - 2008-2023</div>
+                    <div class="gallery-caption">2010</div>
+                    <div class="chart-container">
+                        <canvas id="myChart2010" width="400" height="200"></canvas>
+                    </div>
                 </div>
 
                 <div class="gallery-item">
-                    <img src="https://via.placeholder.com/600x400/2980b9/ffffff?text=Gráfico+2"
-                        alt="Gráfico de temperaturas mínimas">
-                    <div class="gallery-caption">Temperaturas mínimas anuais - 2008-2023</div>
+                    <div class="gallery-caption">2020</div>
+                    <canvas id="myChart2020" width="400" height="200"></canvas>
+                    <div class="chart-container">
+                    </div>
+                </div>
+            </div>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <div class="gallery-caption">2014</div>
+                    <canvas id="myChart2014" width="400" height="200"></canvas>
+                    <div class="chart-container">
+                    </div>
                 </div>
 
                 <div class="gallery-item">
-                    <img src="https://via.placeholder.com/600x400/e67e22/ffffff?text=Gráfico+3" alt="Comparativo anual">
-                    <div class="gallery-caption">Comparativo entre temperaturas extremas</div>
+                    <div class="gallery-caption">2024</div>
+                    <canvas id="myChart2024" width="400" height="200"></canvas>
+                    <div class="chart-container">
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="conclusion">
-            <h2>Conclusões</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed
-                erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim.
-                Phasellus molestie magna non est bibendum non venenatis nisl tempor.</p>
-
-            <p>Suspendisse eu orci lorem. Curabitur quis libero elit. Fusce id leo nec arcu fringilla fermentum.
-                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam at
-                mauris mi.</p>
+            <h2>💡 Conclusões</h2>
+            <p>A base de dados oferecida pelo INMET é muito rica e oferece muitas possibilidades de manipulação. Segue
+                abaixo algumas perguntas possíveis de serem respondidas com a base do INMET.</p>
+            <ul>
+                <li>Quantos dias, em um determinado ano, as temperaturas ficaram acima de 30ºC?</li>
+                <li>Quantos dias, em uma determinada estação do ano, choveu?</li>
+                <li>Qual dia choveu mais ou menos?</li>
+                <li>Quantos dias ficou sem chover?</li>
+                <li>Existe relação em dias que choveram mais e temperaturas mais altas ou baixas?</li>
+                <li>A prevalencia de altas e baixas temperaturas ao longo do ano tem aumentado, diminuido ou se mantido?
+                </li>
+                <li>Combinar dados oferecidos pelo INMET e calcular sensação térmica.</li>
+                <li>Criar coluna calculada para separar os meses do ano por estações.</li>
+                <li>Associar temperaturas extremas a fenômenos climáticos, complementando com novas bases de dados.</li>
+                <li>Associar outras estações metereológicas para corrigir dados inconsistentes e faltantes.</li>
+            </ul>
         </section>
     </main>
 
     <footer>
         <div class="container">
             <p>Projeto de Análise Exploratória de Dados Climáticos</p>
-            <p>Desenvolvido com Python, Pandas, Matplotlib e D3.js</p>
+            <p>Desenvolvido com Python, Pandas e Charts.js</p>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./script.js"></script>
+    <script src="./chart.js"></script>
 </body>
 
 </html>
